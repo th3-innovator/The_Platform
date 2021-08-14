@@ -1,0 +1,124 @@
+{{define "nav"}}
+
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+            
+              <li>
+                   <a href="#" class="ana-btn"><i class="fa fa-pie-chart"></i> Analytics<span class="nav-badge fas fa-caret-down pull-right first"></span></a>
+                                 <ul class="ana-show">
+                                 
+                             
+                                 <a href="/">   <li ><h2 class="fa fa-angle-right"></h2> Phishing Dashboard</li></a>
+                                
+                                 <a href="#"> <li><h2 class="fa fa-angle-right"></h2> Awareness Dashboard</li></a>
+                                 </ul>                                       
+               </li>
+            
+               <li>
+                                 <a href="/sending_profiles"><i class="fa fa-podcast"></i> Sending Profiles</a>
+               </li>
+                   
+                   <!--  old account settings (now in the new profile icon)
+               <li>
+                                 <a href="/settings">Account Settings</span></a>
+               </li>
+                    -->
+                     
+               <li> 
+                   <a href="#" class="phish-btn"><i class="fa fa-anchor"></i> Phishing Simulator<span class="nav-badge fas fa-caret-down second pull-right"></span></a>
+
+                                 <ul class="phish-show">
+                                
+                                           <a href="/campaigns"> <li><h2 class="fa fa-angle-right"></h2> Campaigns  </li></a>
+                              
+                                           <a href="/groups"><li><h2 class="fa fa-angle-right"></h2> Users &amp; Groups     </li></a>
+                           
+                                    <a href="/templates">  <li>  <h2 class="fa fa-angle-right"></h2> Email Templates</li></a>
+                                
+                                        <a href="/landing_pages"> <li> <h2 class="fa fa-angle-right"></h2> Landing Pages  </li></a>
+                              
+                                 </ul>
+             </li>
+            
+                          <li>
+                          
+                          
+                   <a href="#" class="aware-btn"><i class="fa fa-lightbulb"></i> Awareness Manager<span class="nav-badge fas fa-caret-down thrid pull-right"></span><h1 class="nav-badge badge pull-right">Soon</h1></a>
+                                 <ul class="aware-show">
+                                 
+                                
+                                 <a href="#"><li><h2 class="fa fa-angle-right"></h2> Awareness Campaign</li></a>
+                                 
+                                 <a href="#"><li><h2 class="fa fa-angle-right"></h2> Training Videos</li></a>
+                                 
+                                 <a href="#"><li><h2 class="fa fa-angle-right"></h2> Question Bank</li>
+                               
+                                 <a href="#">  <li><h2 class="fa fa-angle-right"></h2> Manage Campaign</li></a>
+                                
+                                 <a href="#"> <li><h2 class="fa fa-angle-right"></h2> Published Campaign</li></a>
+                                
+                                 <a href="#"> <li><h2 class="fa fa-angle-right"></h2> Feedback Form</li></a>
+                                 </ul>                                       
+               </li>
+                 
+                
+                
+                {{if .ModifySystem}}
+               
+                 
+                 <li>
+                    <a href="/users"><i class="fa fa-users"></i> User Management<h1 class="nav-badge badge pull-right">Admin</h1></a>
+                </li>
+                <li>
+                    <a href="/webhooks"><i class="fa fa-th-large"></i> Webhooks<h1 class="nav-badge badge pull-right">Admin</h1></a>
+                </li>
+                {{end}}
+                  
+                
+                <hr style="margin-bottom:0;margin-top:0; border-width: 1px; border-color: white"> 
+                  
+                <li>
+                    <a href="https://docs.getgophish.com/user-guide/">User Guide</a>
+                </li>
+                <li>
+                    <a href="https://docs.getgophish.com/api-documentation/">API Documentation</a>
+                </li>
+            </ul>
+            
+         
+                 <script>
+            $('.ana-btn').click(function(){
+                $('.nav-sidebar ul.ana-show').toggleClass("show");
+        
+                
+                });   
+            </script>
+            
+                             <script>
+            $('.phish-btn').click(function(){
+                $('.nav-sidebar ul.phish-show').toggleClass("show");
+                
+                });   
+            </script>
+            
+                        </script>
+            
+           <script>
+            $('.aware-btn').click(function(){
+                $('.nav-sidebar ul.aware-show').toggleClass("show");
+                
+                });   
+                       </script>
+                    
+            
+        </div>
+    </div>
+</div>
+          
+ 
+{{end}}
